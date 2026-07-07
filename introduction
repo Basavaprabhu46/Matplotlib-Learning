@@ -1,0 +1,54 @@
+Matplotlib is simply a library that converts numerical data into graphical objects.
+
+  Numbers
+     │
+     ▼
+ Matplotlib
+     │
+     ▼
+Pixels on your screen
+
+when u do 
+plt.plot(x_axis,y_axis)
+plt.plot([1,2,3],[4,5,6])
+x = [1,2,3]
+y = [4,5,6]
+
+## Figure vs Plot
+
+This confuses everyone.  
+Imagine a photo frame.  
+The frame is Figure  
+inside the frame : Graph  
+
+Figure  
+│  
+├──Axes  
+│   ├──Line  
+│   ├──Scatter Points  
+│   ├──Text  
+│   ├──Legend  
+│   ├──Axis  
+│   └──Grid  
+
+When you call show(), Matplotlib asks each artist to render itself.  
+
+| Plot | Purpose |
+|------|---------|
+| Line Plot | How values change over time |
+| Scatter Plot | Relationship between two variables |
+| Bar Chart | Compare categories |
+| Histogram | Distribution of data |
+| Pie Chart | Parts of a whole (use sparingly) |
+| Box Plot | Spread and outliers |
+| Violin Plot | Distribution shape |
+| Heatmap | Values across a matrix |
+| Error Bar Plot | Measurement uncertainty |
+
+## Why Learn the Object-Oriented API?
+
+For simple scripts:  
+plt.plot(...)is fine.  
+For projects with multiple subplots, dashboards, or reusable code:
+fig, ax = plt.subplots()  
+ax.plot(...)  
